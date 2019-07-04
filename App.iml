@@ -7,6 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="org.json:json:20140107" level="project" />
+    <orderEntry type="library" name="com.google.common.html.types:proto:1.0.8" level="project" />
+    <orderEntry type="library" exported="" name="com.google.guava:guava:27.1-jre" level="project" />
   </component>
 </module>
-

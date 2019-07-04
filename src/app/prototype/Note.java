@@ -1,24 +1,20 @@
 package app.prototype;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Note {
-    //valid values for the condition variable
-    public enum ConditionTypes {                                             //!!! public or private ??? !!!!
-        GOOD,
-        MIDDLE,
-        BAD,
-        UNKNOWN;    //if condition is unknown
-    }
-    private ConditionTypes Condition;   //note condition
+public class Note implements Serializable {
     private Date NoteDate;              //then note was created
     private String Comments;            //comments about theme of note
     //
     //basic constructor
-    public Note(String comments, ConditionTypes condition ) {
+    public Note(String comments) {
         NoteDate = new Date();  //initialization current date
         Comments = comments;
-        Condition = condition;
     }
-    //
+    //toString method
+    @Override
+    public String toString(){
+        return NoteDate.toString() + ": " + Comments + "\n";
+    }
 }
